@@ -2,7 +2,7 @@
 apply plugin: 'com.android.library'
 
 apply plugin: 'maven'
- 
+
 uploadArchives {
     repositories.mavenDeployer {
         pom.groupId = 'com.uservoice'
@@ -27,8 +27,8 @@ repositories {
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     sourceSets {
         main {
@@ -41,6 +41,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile rootProject.ext.dep.supportAppcompatV7
+
     compile 'com.squareup.okhttp:okhttp:2.4.0'
 }
