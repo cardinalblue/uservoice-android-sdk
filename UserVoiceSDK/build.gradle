@@ -46,7 +46,7 @@ android {
 }
 
 dependencies {
-    compile rootProject.ext.dep.supportAppcompatV7
+    implementation rootProject.ext.dep.supportAppcompatV7
 
-    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    implementation 'com.squareup.okhttp:okhttp:2.4.0'
 }

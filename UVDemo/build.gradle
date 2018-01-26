@@ -69,5 +69,5 @@ tasks.whenTaskAdded { theTask ->
 dependencies {
     // Google Support Library.
     implementation rootProject.ext.dep.supportAppcompatV7
-    compile project(':UserVoiceSDK')
+    implementation project(':UserVoiceSDK')
 }
