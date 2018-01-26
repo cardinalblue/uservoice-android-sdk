@@ -60,13 +60,14 @@ task askForPasswords << {
   android.signingConfigs.release.keyPassword = keyPw
 }
 
-tasks.whenTaskAdded { theTask -> 
+tasks.whenTaskAdded { theTask ->
   if (theTask.name.equals("packageRelease")) {
     theTask.dependsOn "askForPasswords"
   }
 }
 
 dependencies {
-    compile 'com.android.support:support-core-utils:24.2.1'
+    // Google Support Library.
+    implementation rootProject.ext.dep.supportAppcompatV7
     compile project(':UserVoiceSDK')
 }
